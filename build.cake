@@ -2,7 +2,7 @@
 // ADDINS
 //////////////////////////////////////////////////////////////////////
 
-#addin "nuget:?package=MagicChunks&version=1.1.0.34"
+#addin "nuget:?package=MagicChunks&version=2.0.0.119"
 #addin "nuget:?package=Cake.Tfx&version=0.4.2"
 #addin "nuget:?package=Cake.Npm&version=0.7.2"
 
