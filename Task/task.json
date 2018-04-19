@@ -91,6 +91,15 @@
       "required": false,
       "helpMarkDown": "Use an alternate nuget package feed for cake and tools. Defaults to `nuget.org`",
       "groupName": "advanced"
+    },
+    {
+      "name": "CakeRoot",
+      "type": "string",
+      "label": "Root Folder for Cake",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Use an alternate root path for Cake to save tools.",
+      "groupName": "advanced"
     }
   ],
   "execution": {

@@ -5,7 +5,8 @@ Param(
     [string]$Arguments,
     [string]$useBuildAgentNuGetExe,
     [string]$nugetExeDownloadLocation,
-    [string]$ToolFeedUrl
+    [string]$ToolFeedUrl,
+    [string]$CakeRoot
 )
 
 Write-Verbose "Parameters:";
@@ -23,7 +24,13 @@ try {
 Import-Module "Microsoft.TeamFoundation.DistributedTask.Task.Internal";
 Import-Module "Microsoft.TeamFoundation.DistributedTask.Task.Common";
 
-$RootPath = Split-Path -parent $Script;
+if ($CakeRoot -and (Test-Path $CakeRoot)) {
+    $RootPath = $CakeToolRoot;
+}
+else {
+    $RootPath = Split-Path -parent $Script;
+}
+
 $ToolPath = Join-Path $RootPath "tools";
 $PackagePath = Join-Path $ToolPath "packages.config";
 $ModulePath = Join-Path $ToolPath "Modules";
