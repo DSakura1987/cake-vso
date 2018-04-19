@@ -119,4 +119,4 @@ if (!(Test-Path $CakePath)) {
 
 # Start Cake
 Write-Host "Executing build script...";
-Invoke-Tool -Path $CakePath -Arguments "`"$Script`" -target=`"$Target`" -verbosity=`"$Verbosity`" --paths_tools=`"$ToolPath`" $Arguments";
+Invoke-Tool -Path $CakePath -Arguments "`'$Script`' -target=`"$Target`" -verbosity=`"$Verbosity`" --paths_tools=`'$ToolPath`' $Arguments";
